@@ -3,6 +3,8 @@ Imports System.IO
 Imports System.Drawing.Drawing2D
 Imports DevComponents.DotNetBar
 
+'Este comentario es para ver que funcione git desde la consola
+
 Public Class Principal
     Dim WithEvents ctlMdi As MdiClient = Nothing
     Dim imagen As Image
