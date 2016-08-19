@@ -200,7 +200,7 @@ Public Class frmUsuarios
         End If
         txtCodigo.Text = indice
         txtNombre.Text = row.Item("Nombre")
-        txtNombreC.Text = row.Item("NombreC")
+        txtNombreC.Text = row.Item("NombreCompleto")
         pass = row.Item("Pass")
         tipo = row.Item("Tipo")
         actualizarGrid(row.Item("Tipo"))
@@ -299,9 +299,9 @@ Public Class frmUsuarios
                 tipoNuevo = tipos.Rows.Item(0).Item("Codigo")
             End If
             If ediNuevo Or insertar Then
-                cnn.setConsulta("INSERT INTO Usuarios (Nombre,NombreC, Pass, Tipo, Activo) VALUES ('" & txtNombre.Text & "','" & txtNombreC.Text & "','" & pass & "'," & tipoNuevo & ",1)")
+                cnn.setConsulta("INSERT INTO Usuarios (Nombre,NombreCompleto, Pass, Tipo, Activo) VALUES ('" & txtNombre.Text & "','" & txtNombreC.Text & "','" & pass & "'," & tipoNuevo & ",1)")
             Else
-                cnn.setConsulta("UPDATE Usuarios SET Nombre='" & txtNombre.Text & "',NombreC='" & txtNombreC.Text & "',Pass='" & pass & "',Tipo=" & tipoNuevo & " WHERE Codigo=" & indice)
+                cnn.setConsulta("UPDATE Usuarios SET Nombre='" & txtNombre.Text & "',NombreCompleto='" & txtNombreC.Text & "',Pass='" & pass & "',Tipo=" & tipoNuevo & " WHERE Codigo=" & indice)
             End If
         Else
             MessageBoxEx.Show("El nombre de usuario ya existe", "No se puede duplicar", MessageBoxButtons.OK)
