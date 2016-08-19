@@ -3,7 +3,7 @@ Imports System.IO
 Imports System.Drawing.Drawing2D
 Imports DevComponents.DotNetBar
 
-Public Class Principal
+Public Class Principal 'Hola
     Dim WithEvents ctlMdi As MdiClient = Nothing
     Dim imagen As Image
     Dim col As Color
