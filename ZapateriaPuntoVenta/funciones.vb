@@ -13,6 +13,7 @@ Module funciones
 
     Public Function verificarBaseDatos()
         Dim direccion As String = Application.StartupPath & "\conf.ini"
+
         Dim texto As String
         Try
             Dim sr As New StreamReader(direccion)

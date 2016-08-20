@@ -9,8 +9,9 @@ Public Class frmConfiguracion
         If Not IsNothing(dt) Then
             Dim row As DataRow = dt.Rows(0)
             If row.Item("Consulta") = False Then
-                TabControl1.TabPages("Sesiones").Hide()
-                TabControl1.TabPages("General").Hide()
+                TabControl1.TabPages("Sesiones").Dispose()
+                TabControl1.TabPages("General").Dispose()
+                TabControl1.Refresh
 
             End If
         End If
