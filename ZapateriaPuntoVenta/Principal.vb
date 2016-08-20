@@ -331,4 +331,10 @@ Public Class Principal 'Hola
             Me.Close()
         End If
     End Sub
+
+    Private Sub ConfiguraciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConfiguraciónToolStripMenuItem.Click
+        Dim f As New frmConfiguracion
+        f.MdiParent = Me
+        f.Show()
+    End Sub
 End Class

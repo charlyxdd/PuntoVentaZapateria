@@ -48,25 +48,23 @@ Partial Class Principal
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguraciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.barra = New System.Windows.Forms.ToolStrip()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.cmdNuevo = New System.Windows.Forms.ToolStripButton()
-        Me.cmdEditar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.cmdEliminar = New System.Windows.Forms.ToolStripButton()
-        Me.cmdBuscar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.cmdAceptar = New System.Windows.Forms.ToolStripButton()
-        Me.cmdCancelar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.cmdImprmir = New System.Windows.Forms.ToolStripButton()
         Me.BubbleBar1 = New DevComponents.DotNetBar.BubbleBar()
         Me.accesos = New DevComponents.DotNetBar.BubbleBarTab(Me.components)
         Me.BubbleButton1 = New DevComponents.DotNetBar.BubbleButton()
+        Me.cmdNuevo = New System.Windows.Forms.ToolStripButton()
+        Me.cmdEditar = New System.Windows.Forms.ToolStripButton()
+        Me.cmdEliminar = New System.Windows.Forms.ToolStripButton()
+        Me.cmdBuscar = New System.Windows.Forms.ToolStripButton()
+        Me.cmdAceptar = New System.Windows.Forms.ToolStripButton()
+        Me.cmdCancelar = New System.Windows.Forms.ToolStripButton()
+        Me.cmdImprmir = New System.Windows.Forms.ToolStripButton()
         Me.BubbleButton2 = New DevComponents.DotNetBar.BubbleButton()
         Me.MenuStrip1.SuspendLayout()
         Me.barra.SuspendLayout()
@@ -226,27 +224,14 @@ Partial Class Principal
         'InventarioToolStripMenuItem
         '
         Me.InventarioToolStripMenuItem.Name = "InventarioToolStripMenuItem"
-        Me.InventarioToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.InventarioToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.InventarioToolStripMenuItem.Text = "Inventario"
         '
         'ConfiguraciónToolStripMenuItem
         '
-        Me.ConfiguraciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SistemaToolStripMenuItem, Me.UsuarioToolStripMenuItem})
         Me.ConfiguraciónToolStripMenuItem.Name = "ConfiguraciónToolStripMenuItem"
         Me.ConfiguraciónToolStripMenuItem.Size = New System.Drawing.Size(95, 19)
         Me.ConfiguraciónToolStripMenuItem.Text = "Configuración"
-        '
-        'SistemaToolStripMenuItem
-        '
-        Me.SistemaToolStripMenuItem.Name = "SistemaToolStripMenuItem"
-        Me.SistemaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SistemaToolStripMenuItem.Text = "Sistema"
-        '
-        'UsuarioToolStripMenuItem
-        '
-        Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.UsuarioToolStripMenuItem.Text = "Usuario"
         '
         'CerrarSesiónToolStripMenuItem
         '
@@ -274,99 +259,20 @@ Partial Class Principal
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 72)
         '
-        'cmdNuevo
-        '
-        Me.cmdNuevo.Enabled = False
-        Me.cmdNuevo.Image = CType(resources.GetObject("cmdNuevo.Image"), System.Drawing.Image)
-        Me.cmdNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.cmdNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.cmdNuevo.Name = "cmdNuevo"
-        Me.cmdNuevo.Size = New System.Drawing.Size(54, 69)
-        Me.cmdNuevo.Text = "Nuevo"
-        Me.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.cmdNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'cmdEditar
-        '
-        Me.cmdEditar.Enabled = False
-        Me.cmdEditar.Image = CType(resources.GetObject("cmdEditar.Image"), System.Drawing.Image)
-        Me.cmdEditar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.cmdEditar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.cmdEditar.Name = "cmdEditar"
-        Me.cmdEditar.Size = New System.Drawing.Size(54, 69)
-        Me.cmdEditar.Text = "Editar"
-        Me.cmdEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 72)
-        '
-        'cmdEliminar
-        '
-        Me.cmdEliminar.Enabled = False
-        Me.cmdEliminar.Image = CType(resources.GetObject("cmdEliminar.Image"), System.Drawing.Image)
-        Me.cmdEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.cmdEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.cmdEliminar.Name = "cmdEliminar"
-        Me.cmdEliminar.Size = New System.Drawing.Size(54, 69)
-        Me.cmdEliminar.Text = "Eliminar"
-        Me.cmdEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'cmdBuscar
-        '
-        Me.cmdBuscar.Enabled = False
-        Me.cmdBuscar.Image = CType(resources.GetObject("cmdBuscar.Image"), System.Drawing.Image)
-        Me.cmdBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.cmdBuscar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.cmdBuscar.Name = "cmdBuscar"
-        Me.cmdBuscar.Size = New System.Drawing.Size(54, 69)
-        Me.cmdBuscar.Text = "Buscar"
-        Me.cmdBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 72)
         '
-        'cmdAceptar
-        '
-        Me.cmdAceptar.Enabled = False
-        Me.cmdAceptar.Image = CType(resources.GetObject("cmdAceptar.Image"), System.Drawing.Image)
-        Me.cmdAceptar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.cmdAceptar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.cmdAceptar.Name = "cmdAceptar"
-        Me.cmdAceptar.Size = New System.Drawing.Size(54, 69)
-        Me.cmdAceptar.Text = "Aceptar"
-        Me.cmdAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'cmdCancelar
-        '
-        Me.cmdCancelar.Enabled = False
-        Me.cmdCancelar.Image = CType(resources.GetObject("cmdCancelar.Image"), System.Drawing.Image)
-        Me.cmdCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.cmdCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.cmdCancelar.Name = "cmdCancelar"
-        Me.cmdCancelar.Size = New System.Drawing.Size(57, 69)
-        Me.cmdCancelar.Text = "Cancelar"
-        Me.cmdCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 72)
-        '
-        'cmdImprmir
-        '
-        Me.cmdImprmir.Enabled = False
-        Me.cmdImprmir.Image = CType(resources.GetObject("cmdImprmir.Image"), System.Drawing.Image)
-        Me.cmdImprmir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.cmdImprmir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.cmdImprmir.Name = "cmdImprmir"
-        Me.cmdImprmir.Size = New System.Drawing.Size(57, 69)
-        Me.cmdImprmir.Text = "Imprimir"
-        Me.cmdImprmir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.cmdImprmir.ToolTipText = "Imprimir"
         '
         'BubbleBar1
         '
@@ -422,6 +328,85 @@ Partial Class Principal
         '
         Me.BubbleButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BubbleButton1.Name = "BubbleButton1"
+        '
+        'cmdNuevo
+        '
+        Me.cmdNuevo.Enabled = False
+        Me.cmdNuevo.Image = CType(resources.GetObject("cmdNuevo.Image"), System.Drawing.Image)
+        Me.cmdNuevo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.cmdNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdNuevo.Name = "cmdNuevo"
+        Me.cmdNuevo.Size = New System.Drawing.Size(54, 69)
+        Me.cmdNuevo.Text = "Nuevo"
+        Me.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.cmdNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'cmdEditar
+        '
+        Me.cmdEditar.Enabled = False
+        Me.cmdEditar.Image = CType(resources.GetObject("cmdEditar.Image"), System.Drawing.Image)
+        Me.cmdEditar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.cmdEditar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdEditar.Name = "cmdEditar"
+        Me.cmdEditar.Size = New System.Drawing.Size(54, 69)
+        Me.cmdEditar.Text = "Editar"
+        Me.cmdEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'cmdEliminar
+        '
+        Me.cmdEliminar.Enabled = False
+        Me.cmdEliminar.Image = CType(resources.GetObject("cmdEliminar.Image"), System.Drawing.Image)
+        Me.cmdEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.cmdEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdEliminar.Name = "cmdEliminar"
+        Me.cmdEliminar.Size = New System.Drawing.Size(54, 69)
+        Me.cmdEliminar.Text = "Eliminar"
+        Me.cmdEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'cmdBuscar
+        '
+        Me.cmdBuscar.Enabled = False
+        Me.cmdBuscar.Image = CType(resources.GetObject("cmdBuscar.Image"), System.Drawing.Image)
+        Me.cmdBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.cmdBuscar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdBuscar.Name = "cmdBuscar"
+        Me.cmdBuscar.Size = New System.Drawing.Size(54, 69)
+        Me.cmdBuscar.Text = "Buscar"
+        Me.cmdBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'cmdAceptar
+        '
+        Me.cmdAceptar.Enabled = False
+        Me.cmdAceptar.Image = CType(resources.GetObject("cmdAceptar.Image"), System.Drawing.Image)
+        Me.cmdAceptar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.cmdAceptar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdAceptar.Name = "cmdAceptar"
+        Me.cmdAceptar.Size = New System.Drawing.Size(54, 69)
+        Me.cmdAceptar.Text = "Aceptar"
+        Me.cmdAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'cmdCancelar
+        '
+        Me.cmdCancelar.Enabled = False
+        Me.cmdCancelar.Image = CType(resources.GetObject("cmdCancelar.Image"), System.Drawing.Image)
+        Me.cmdCancelar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.cmdCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdCancelar.Name = "cmdCancelar"
+        Me.cmdCancelar.Size = New System.Drawing.Size(57, 69)
+        Me.cmdCancelar.Text = "Cancelar"
+        Me.cmdCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'cmdImprmir
+        '
+        Me.cmdImprmir.Enabled = False
+        Me.cmdImprmir.Image = CType(resources.GetObject("cmdImprmir.Image"), System.Drawing.Image)
+        Me.cmdImprmir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.cmdImprmir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdImprmir.Name = "cmdImprmir"
+        Me.cmdImprmir.Size = New System.Drawing.Size(57, 69)
+        Me.cmdImprmir.Text = "Imprimir"
+        Me.cmdImprmir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.cmdImprmir.ToolTipText = "Imprimir"
         '
         'BubbleButton2
         '
@@ -493,8 +478,6 @@ Partial Class Principal
     Friend WithEvents OperacionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PedidosVentasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InventarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SistemaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents UsuarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CerrarSesiónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
