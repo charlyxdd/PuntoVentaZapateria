@@ -14,29 +14,33 @@ Public Class frmConfiguracion
         'chkModulos.Items.Add("numero 1")
         cnn = New Conexion(cadConexion)
         Dim dt As DataTable = cnn.getConsulta("SELECT Consulta FROM Permisos WHERE Tipo=" & tipoUser & " AND Modulo=7")
-        If Not IsNothing(dt) Then
-            Dim row As DataRow = dt.Rows(0)
+        Dim accesos As Boolean
+        Dim row As DataRow
+
+        If Not IsNothing(dt) Then 'Verificación de permisos para mostrar o ocultar las pestañas
+            row = dt.Rows(0)
             If row.Item("Consulta") = False Then
                 TabControl1.TabPages("Sesiones").Dispose()
                 TabControl1.TabPages("General").Dispose()
                 TabControl1.Refresh()
-                dt = cnn.getConsulta("SELECT accesos FROM configuracionPrincipal")
-                If Not IsNothing(dt) Then
-                    row = dt.Rows(0)
-                    If row.Item("Accesos") = False Then
-                        TabControl1.TabPages("Accesos").Dispose()
-                        cerrar = True
-
-                    End If
-                End If
             End If
         End If
 
-        dt = cnn.getConsulta("SELECT accesos FROM ConfiguracionPrincipal")
+        dt = cnn.getConsulta("SELECT accesos FROM configuracionPrincipal") 'Verificar si los accesos directos estan activados
         If Not IsNothing(dt) Then
-            Dim row As DataRow = dt.Rows(0)
+            row = dt.Rows(0)
+            If row.Item("Accesos") = False Then
+                TabControl1.TabPages("Accesos").Dispose()
+                cerrar = True
+            Else
+                accesos = True
+            End If
+        End If
+
+        If (accesos) Then 'Si estan habilitados los accesos entonces cargas los módulos donde se tengan permisos de acceso
+            row = dt.Rows(0)
             If row.Item("Accesos") = True Then
-                dt = cnn.getConsulta("SELECT Codigo, Modulo FROM Modulos INNER JOIN Permisos ON Permisos.Modulo=Modulos.Codigo WHERE Permisos.Tipo=" & tipoUser & " AND Permisos.Consulta=True")
+                dt = cnn.getConsulta("SELECT Modulos.Codigo, Modulos.Modulo FROM Modulos INNER JOIN Permisos ON Permisos.Modulo=Modulos.Codigo WHERE Permisos.Tipo=" & tipoUser & " AND Permisos.Consulta=1")
                 Dim contador As Integer
                 For contador = 0 To (dt.Rows.Count - 1)
                     row = dt.Rows(contador)
@@ -44,11 +48,5 @@ Public Class frmConfiguracion
                 Next
             End If
         End If
-
-
-
-
-
-
     End Sub
 End Class

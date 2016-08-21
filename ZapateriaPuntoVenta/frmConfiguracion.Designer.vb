@@ -29,6 +29,8 @@ Partial Class frmConfiguracion
         Me.Sesiones = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.General = New System.Windows.Forms.TabPage()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmdGuardar = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.Accesos.SuspendLayout()
         Me.Sesiones.SuspendLayout()
@@ -45,16 +47,18 @@ Partial Class frmConfiguracion
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(547, 357)
+        Me.TabControl1.Size = New System.Drawing.Size(564, 371)
         Me.TabControl1.TabIndex = 1
         '
         'Accesos
         '
+        Me.Accesos.Controls.Add(Me.cmdGuardar)
+        Me.Accesos.Controls.Add(Me.Label1)
         Me.Accesos.Controls.Add(Me.chkModulos)
         Me.Accesos.Location = New System.Drawing.Point(4, 22)
         Me.Accesos.Name = "Accesos"
         Me.Accesos.Padding = New System.Windows.Forms.Padding(3)
-        Me.Accesos.Size = New System.Drawing.Size(539, 331)
+        Me.Accesos.Size = New System.Drawing.Size(556, 345)
         Me.Accesos.TabIndex = 0
         Me.Accesos.Text = "Accesos Directos"
         Me.Accesos.UseVisualStyleBackColor = True
@@ -62,9 +66,9 @@ Partial Class frmConfiguracion
         'chkModulos
         '
         Me.chkModulos.FormattingEnabled = True
-        Me.chkModulos.Location = New System.Drawing.Point(8, 11)
+        Me.chkModulos.Location = New System.Drawing.Point(8, 39)
         Me.chkModulos.Name = "chkModulos"
-        Me.chkModulos.Size = New System.Drawing.Size(449, 259)
+        Me.chkModulos.Size = New System.Drawing.Size(539, 259)
         Me.chkModulos.TabIndex = 0
         '
         'Sesiones
@@ -96,11 +100,31 @@ Partial Class frmConfiguracion
         Me.General.Text = "General"
         Me.General.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Label1.Location = New System.Drawing.Point(6, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(63, 19)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Módulos"
+        '
+        'cmdGuardar
+        '
+        Me.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdGuardar.Location = New System.Drawing.Point(466, 304)
+        Me.cmdGuardar.Name = "cmdGuardar"
+        Me.cmdGuardar.Size = New System.Drawing.Size(81, 28)
+        Me.cmdGuardar.TabIndex = 2
+        Me.cmdGuardar.Text = "Guardar"
+        Me.cmdGuardar.UseVisualStyleBackColor = True
+        '
         'frmConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(571, 381)
+        Me.ClientSize = New System.Drawing.Size(588, 395)
         Me.Controls.Add(Me.TabControl1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -111,6 +135,7 @@ Partial Class frmConfiguracion
         Me.Text = "Configuración"
         Me.TabControl1.ResumeLayout(False)
         Me.Accesos.ResumeLayout(False)
+        Me.Accesos.PerformLayout()
         Me.Sesiones.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -121,4 +146,6 @@ Partial Class frmConfiguracion
     Friend WithEvents Sesiones As System.Windows.Forms.TabPage
     Friend WithEvents General As System.Windows.Forms.TabPage
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents cmdGuardar As System.Windows.Forms.Button
 End Class
