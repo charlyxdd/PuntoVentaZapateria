@@ -41,12 +41,32 @@ Public Class frmConfiguracion
             row = dt.Rows(0)
             If row.Item("Accesos") = True Then
                 dt = cnn.getConsulta("SELECT Modulos.Codigo, Modulos.Modulo FROM Modulos INNER JOIN Permisos ON Permisos.Modulo=Modulos.Codigo WHERE Permisos.Tipo=" & tipoUser & " AND Permisos.Consulta=1")
+                Dim dt2 As DataTable = cnn.getConsulta("SELECT Modulo FROM Accesos WHERE Usuario=" & codUser)
                 Dim contador As Integer
                 For contador = 0 To (dt.Rows.Count - 1)
                     row = dt.Rows(contador)
-                    chkModulos.Items.Add(row.Item("Modulo"))
+                    Dim rows As DataRow() = dt2.Select("Modulo=" & row.Item("Codigo"))
+                    If rows.Length > 1 Then
+                        chkModulos.SetItemChecked(row.Item("código") & "-" & row.Item("modulo"), True)
+                    Else
+                        chkModulos.Items.Add(row.Item("código") & "-" & row.Item("modulo"))
+
+
+                    End If
                 Next
             End If
+
+
         End If
+    End Sub
+
+    Private Sub cmdGuardar_Click(sender As Object, e As EventArgs) Handles cmdGuardar.Click
+        cnn.setConsulta("DELETE FROM Accesos WHERE usuario=" & codUser)
+        For i As Integer = 0 To (chkModulos.CheckedItems.Count - 1)
+            Dim codigo As String() = Split(chkModulos.CheckedItems(i).Text, "-")
+            cnn.setConsulta("INSERT INTO accesos (Usuario, Modulo) VALUES (" & codUser & "," & codigo(0))
+
+        Next
+
     End Sub
 End Class

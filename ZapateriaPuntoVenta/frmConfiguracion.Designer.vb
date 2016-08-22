@@ -25,12 +25,12 @@ Partial Class frmConfiguracion
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConfiguracion))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Accesos = New System.Windows.Forms.TabPage()
+        Me.cmdGuardar = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.chkModulos = New System.Windows.Forms.CheckedListBox()
         Me.Sesiones = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.General = New System.Windows.Forms.TabPage()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmdGuardar = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.Accesos.SuspendLayout()
         Me.Sesiones.SuspendLayout()
@@ -47,7 +47,7 @@ Partial Class frmConfiguracion
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(564, 371)
+        Me.TabControl1.Size = New System.Drawing.Size(592, 385)
         Me.TabControl1.TabIndex = 1
         '
         'Accesos
@@ -58,10 +58,30 @@ Partial Class frmConfiguracion
         Me.Accesos.Location = New System.Drawing.Point(4, 22)
         Me.Accesos.Name = "Accesos"
         Me.Accesos.Padding = New System.Windows.Forms.Padding(3)
-        Me.Accesos.Size = New System.Drawing.Size(556, 345)
+        Me.Accesos.Size = New System.Drawing.Size(584, 359)
         Me.Accesos.TabIndex = 0
         Me.Accesos.Text = "Accesos Directos"
         Me.Accesos.UseVisualStyleBackColor = True
+        '
+        'cmdGuardar
+        '
+        Me.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdGuardar.Location = New System.Drawing.Point(466, 304)
+        Me.cmdGuardar.Name = "cmdGuardar"
+        Me.cmdGuardar.Size = New System.Drawing.Size(81, 28)
+        Me.cmdGuardar.TabIndex = 2
+        Me.cmdGuardar.Text = "Guardar"
+        Me.cmdGuardar.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Label1.Location = New System.Drawing.Point(6, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(63, 19)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Módulos"
         '
         'chkModulos
         '
@@ -77,7 +97,7 @@ Partial Class frmConfiguracion
         Me.Sesiones.Location = New System.Drawing.Point(4, 22)
         Me.Sesiones.Name = "Sesiones"
         Me.Sesiones.Padding = New System.Windows.Forms.Padding(3)
-        Me.Sesiones.Size = New System.Drawing.Size(539, 331)
+        Me.Sesiones.Size = New System.Drawing.Size(570, 352)
         Me.Sesiones.TabIndex = 1
         Me.Sesiones.Text = "Inicio de Sesión"
         Me.Sesiones.UseVisualStyleBackColor = True
@@ -95,36 +115,16 @@ Partial Class frmConfiguracion
         '
         Me.General.Location = New System.Drawing.Point(4, 22)
         Me.General.Name = "General"
-        Me.General.Size = New System.Drawing.Size(539, 331)
+        Me.General.Size = New System.Drawing.Size(570, 352)
         Me.General.TabIndex = 2
         Me.General.Text = "General"
         Me.General.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.Label1.Location = New System.Drawing.Point(6, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 19)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Módulos"
-        '
-        'cmdGuardar
-        '
-        Me.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdGuardar.Location = New System.Drawing.Point(466, 304)
-        Me.cmdGuardar.Name = "cmdGuardar"
-        Me.cmdGuardar.Size = New System.Drawing.Size(81, 28)
-        Me.cmdGuardar.TabIndex = 2
-        Me.cmdGuardar.Text = "Guardar"
-        Me.cmdGuardar.UseVisualStyleBackColor = True
         '
         'frmConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(588, 395)
+        Me.ClientSize = New System.Drawing.Size(616, 409)
         Me.Controls.Add(Me.TabControl1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
