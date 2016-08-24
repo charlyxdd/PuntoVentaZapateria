@@ -46,12 +46,10 @@ Public Class frmConfiguracion
                 For contador = 0 To (dt.Rows.Count - 1)
                     row = dt.Rows(contador)
                     Dim rows As DataRow() = dt2.Select("Modulo=" & row.Item("Codigo"))
-                    If rows.Length > 1 Then
-                        chkModulos.SetItemChecked(row.Item("código") & "-" & row.Item("modulo"), True)
+                    If rows.Length > 0 Then
+                        chkModulos.Items.Add(row.Item("Codigo") & "-" & row.Item("Modulo"), True)
                     Else
-                        chkModulos.Items.Add(row.Item("código") & "-" & row.Item("modulo"))
-
-
+                        chkModulos.Items.Add(row.Item("Codigo") & "-" & row.Item("Modulo"))
                     End If
                 Next
             End If
@@ -63,10 +61,8 @@ Public Class frmConfiguracion
     Private Sub cmdGuardar_Click(sender As Object, e As EventArgs) Handles cmdGuardar.Click
         cnn.setConsulta("DELETE FROM Accesos WHERE usuario=" & codUser)
         For i As Integer = 0 To (chkModulos.CheckedItems.Count - 1)
-            Dim codigo As String() = Split(chkModulos.CheckedItems(i).Text, "-")
-            cnn.setConsulta("INSERT INTO accesos (Usuario, Modulo) VALUES (" & codUser & "," & codigo(0))
-
+            Dim codigo As String() = Split(chkModulos.CheckedItems(i), "-")
+            cnn.setConsulta("INSERT INTO accesos (Usuario, Modulo) VALUES (" & codUser & "," & codigo(0) & ")")
         Next
-
     End Sub
 End Class
